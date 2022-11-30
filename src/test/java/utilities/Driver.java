@@ -13,6 +13,8 @@ import java.time.Duration;
 
 public class Driver {
 
+    private Driver(){} //kimse driver classından obje oluşturamaz (SingletonPattern)
+
     public static WebDriver driver;
 
     public static WebDriver getDriver(){
