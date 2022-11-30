@@ -24,6 +24,8 @@ public class C02_PropertiesFirstClass {
         hmcp.hmcUsername.sendKeys(ConfigReader.getProperty("hmcValidUsername"));
         //test data password: Manager1!
         hmcp.hmcPassword.sendKeys(ConfigReader.getProperty("hmcValidPassword"));
+
+        hmcp.wait(3);
         //Değerleri girildiğinde sayfaya başarılı şekilde girebildiğini test et
         hmcp.hmcLoginButton2.click();
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().equals("https://www.hotelmycamp.com/Admin/UserAdmin"));
