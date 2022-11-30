@@ -22,4 +22,7 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//input[@id='btnSubmit']")
     public WebElement hmcLoginButton2;
 
+    @FindBy(id = "divMessageResult")
+    public WebElement hmcNegativeLoginAlert;
+
 }
