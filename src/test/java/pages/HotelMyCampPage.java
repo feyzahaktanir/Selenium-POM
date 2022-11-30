@@ -25,4 +25,10 @@ public class HotelMyCampPage {
     @FindBy(id = "divMessageResult")
     public WebElement hmcNegativeLoginAlert;
 
+    @FindBy(id = "details-button")
+    public WebElement hmcGelismisButton;
+
+    @FindBy(id = "proceed-link")
+    public WebElement hmcSiteyeİlerle;
+
 }
