@@ -3,7 +3,6 @@ package tests.day17;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
-import javax.swing.*;
 
 public class C04_SingletonPattern {
     @Test
@@ -16,11 +15,11 @@ public class C04_SingletonPattern {
         //ancak driver classında driver isminde bir intance variable da var
         //ve biz obje üreterekbu instance drivera ulaşabiliriz.
 
-        Driver driver1 = new Driver(); //Driver classını private yaptık
-
-        Driver driver2 = new Driver();
-
-        Driver driver3 = new Driver();
+//        Driver driver1 = new Driver(); //Driver classını private yaptık
+//
+//        Driver driver2 = new Driver();
+//
+//        Driver driver3 = new Driver();
 
         //singletonpattern kabul görmüş bir patterndir
         //amaç bir classtan obje üretilmemesini sağlamaktır.
