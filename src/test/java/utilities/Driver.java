@@ -58,8 +58,7 @@ public class Driver {
         }
     }
 
-    public static void closeDriver() throws InterruptedException {
-        Thread.sleep(3000);
+    public static void closeDriver() {
         //buraya koymamız gerekiyor, yoksa tekrar açamadığı için kapatırken hata verir.
         //açılmayan sayfayı kapatamazsın
         if (driver != null) {
