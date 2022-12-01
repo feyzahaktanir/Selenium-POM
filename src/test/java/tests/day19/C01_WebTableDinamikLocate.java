@@ -28,9 +28,14 @@ public class C01_WebTableDinamikLocate {
     public void cellCaller(){
         hotelMyCampPage = new HotelMyCampPage();
         hotelMyCampPage.logIn();
-        WebElement selectedCell = hotelMyCampPage.cellCall(2,4);
-        System.out.println("2.satırın 4.hücresi = " + selectedCell.getText());
+        System.out.println("2.satırın 4.hücresi = " + hotelMyCampPage.cellCall(2,4));
     }
 
     //      3-sütun numarası verdiğimde bana tüm sütunu yazdırsın
+    @Test
+    public void columnCaller(){
+        hotelMyCampPage = new HotelMyCampPage();
+        hotelMyCampPage.logIn();
+        hotelMyCampPage.columnCall(2);
+    }
 }

@@ -108,16 +108,24 @@ public class HotelMyCampPage {
         //7.satırı yazdır //tbody//tr[7]
         String rowDinamikXpath = "//tbody//tr[" + rowNo + "]";
         WebElement row = Driver.getDriver().findElement(By.xpath(rowDinamikXpath));
-        return row;
+        return row; //burada webelement döndürmek istedik
     }
 
-    public WebElement cellCall(int rowNo, int cellNo){
+    public String cellCall(int rowNo, int cellNo){
         //2.satırın 4.datası //tbody//tr[2]//td[4]
         //4.satırın 5.datası //tbody//tr[4]//td[5]
         String cellDinamikXpath = "//tbody//tr[" + rowNo + "]//td[" + cellNo + "]";
         WebElement cell = Driver.getDriver().findElement(By.xpath(cellDinamikXpath));
-        return cell;
+        String scell = cell.getText();
+        return scell; //burada string döndürmek istedik
     }
 
+    public void columnCall(int columnNo){
+        //4.sütunun tamamı //tbody//td[4]
+        int rows = wtRows.size();
+        for (int i=1; i<= wtRows.size(); i++){
+            System.out.println(i + ". column: " + cellCall(i, columnNo));
+        }
+    }
 
 }
