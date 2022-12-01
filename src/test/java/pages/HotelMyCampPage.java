@@ -77,7 +77,7 @@ public class HotelMyCampPage {
 
     public void logIn(){
         Driver.getDriver().get(ConfigReader.getProperty("hmcURL"));
-        baglantiGizliDegil();
+        //baglantiGizliDegil();
         hmcLoginButton1.click();
         hmcUsername.sendKeys(ConfigReader.getProperty("hmcValidUsername"));
         hmcPassword.sendKeys(ConfigReader.getProperty("hmcValidPassword"));
@@ -98,7 +98,8 @@ public class HotelMyCampPage {
     public WebElement wtALLtbody;
     @FindBy(xpath = "//tbody//td")
     public List<WebElement> wtALLtbodytd;
-
+    @FindBy(xpath = "//tbody//tr")
+    public List<WebElement> wtRows;
 
 
 

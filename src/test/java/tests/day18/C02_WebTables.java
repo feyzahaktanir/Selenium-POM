@@ -23,7 +23,7 @@ public class C02_WebTables {
     }
 
     //3-table() metodu oluşturun
-    @Test
+    @Test(dependsOnMethods = "login")
     public void table(){
         hotelMyCampPage = new HotelMyCampPage();
 
@@ -41,23 +41,33 @@ public class C02_WebTables {
         //dolayısıyla bu elementlere tek tek ulaşmamız mumkün olmaz
         //sadece constain method'u ile body'de olup olmadıklarını test edebilriz.
         List<WebElement> tbodytdDataList = hotelMyCampPage.wtALLtbodytd;
-        System.out.println("tbodytdDataList = " + tbodytdDataList.size());
+        for (WebElement each: tbodytdDataList
+        ) {
+            System.out.println(each.getText());
+        }
 
         //Eğer her bir datayı ayrı ayrı almak istersek
         // //tbody//td şeklinde locate edip bir list'e atabiliriz.
 
-        Driver.closeDriver();
+
     }
 
     //4-printRows() metodu oluşturun //tr
-    @Test
+    @Test(dependsOnMethods = "login")
     public void printRows(){
+        hotelMyCampPage = new HotelMyCampPage();
         //          - table body'sinde bulunan toplam satır(row) sayısını bulun
-
+        System.out.println(hotelMyCampPage.wtRows.size());
         //          - table body'sinde bulunan satırları(rowa) konsolda yazdırın
+        List<WebElement> rowsListWE = hotelMyCampPage.wtRows;
+        for (WebElement each: rowsListWE
+             ) {
+            System.out.println(each.getText());
+        }
         //          - 4.satırdaki elemetleri konsolda yazdırın
+        System.out.println("4.row: " + rowsListWE.get(3).getText());
 
-
+        Driver.closeDriver();
     }
 
 
