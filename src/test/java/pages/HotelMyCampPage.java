@@ -6,11 +6,14 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.util.List;
+
 public class HotelMyCampPage {
     public HotelMyCampPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    //Login locates
     @FindBy(xpath = "//a[text()='Log in']")
     public WebElement hmcLoginButton1;
 
@@ -26,12 +29,14 @@ public class HotelMyCampPage {
     @FindBy(id = "divMessageResult")
     public WebElement hmcNegativeLoginAlert;
 
+    //Bağlantı Gizliliği Locates
     @FindBy(id = "details-button")
     public WebElement hmcGelismisButton;
 
     @FindBy(id = "proceed-link")
     public WebElement hmcSiteyeİlerle;
 
+    //Pnael Locates
     @FindBy(xpath = "//span[text()='Hotel Management']")
     public WebElement hmcHotelManagementLink;
 
@@ -39,6 +44,7 @@ public class HotelMyCampPage {
             "\t\t\t\t\t\t\t            Hotel List']")
     public WebElement hmcHotelList;
 
+    //Otel ekleme locates
     @FindBy(xpath = "//span[text()='Add Hotel ']")
     public WebElement hmcAddHotel;
 
@@ -84,5 +90,16 @@ public class HotelMyCampPage {
             hmcSiteyeİlerle.click();
         }
     }
+
+    //Panel Users List Locates
+    @FindBy(xpath = "//thead//tr[1]//th")
+    public List<WebElement> wtHeaderTitles;
+    @FindBy(xpath = "//tbody")
+    public WebElement wtALLtbody;
+    @FindBy(xpath = "//tbody//td")
+    public List<WebElement> wtALLtbodytd;
+
+
+
 
 }
