@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -101,6 +102,22 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//tbody//tr")
     public List<WebElement> wtRows;
 
+
+    public WebElement rowCall(int rowNo){
+        //2.satırı yazdır //tbody//tr[2]
+        //7.satırı yazdır //tbody//tr[7]
+        String rowDinamikXpath = "//tbody//tr[" + rowNo + "]";
+        WebElement row = Driver.getDriver().findElement(By.xpath(rowDinamikXpath));
+        return row;
+    }
+
+    public WebElement cellCall(int rowNo, int cellNo){
+        //2.satırın 4.datası //tbody//tr[2]//td[4]
+        //4.satırın 5.datası //tbody//tr[4]//td[5]
+        String cellDinamikXpath = "//tbody//tr[" + rowNo + "]//td[" + cellNo + "]";
+        WebElement cell = Driver.getDriver().findElement(By.xpath(cellDinamikXpath));
+        return cell;
+    }
 
 
 }
