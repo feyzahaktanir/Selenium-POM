@@ -1,7 +1,6 @@
 package tests.day20;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
