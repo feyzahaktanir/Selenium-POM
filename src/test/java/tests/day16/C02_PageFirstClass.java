@@ -30,7 +30,7 @@ public class C02_PageFirstClass {
         Driver.closeDriver();
     }
 
-    @Test
+    @Test ( groups = {"Miniregression", "Smoke"})
     public void test2() throws InterruptedException {
 
         //amazona gidelim

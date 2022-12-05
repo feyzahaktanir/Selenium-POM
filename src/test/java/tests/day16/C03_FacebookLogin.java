@@ -12,7 +12,7 @@ public class C03_FacebookLogin {
 
 
 
-    @Test
+    @Test ( groups = {"Miniregression", "Regression"})
     public void facebookTest() throws InterruptedException {
         // 1 - https://www.facebook.com adresine gidin
         Driver.getDriver().get("https://www.facebook.com");

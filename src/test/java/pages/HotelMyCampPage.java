@@ -78,7 +78,7 @@ public class HotelMyCampPage {
 
     public void logIn(){
         Driver.getDriver().get(ConfigReader.getProperty("hmcURL"));
-        //baglantiGizliDegil();
+        baglantiGizliDegil();
         hmcLoginButton1.click();
         hmcUsername.sendKeys(ConfigReader.getProperty("hmcValidUsername"));
         hmcPassword.sendKeys(ConfigReader.getProperty("hmcValidPassword"));

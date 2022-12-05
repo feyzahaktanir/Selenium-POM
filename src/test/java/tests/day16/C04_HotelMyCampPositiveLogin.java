@@ -10,7 +10,7 @@ import utilities.Driver;
 public class C04_HotelMyCampPositiveLogin {
 
     Faker faker = new Faker();
-    @Test
+    @Test( groups = {"Miniregression", "Smoke"})
     public void positiveLoginTest() throws InterruptedException {
         //1-https://www.hotelmycamp.com adresine git
         Driver.getDriver().get("https://www.hotelmycamp.com");

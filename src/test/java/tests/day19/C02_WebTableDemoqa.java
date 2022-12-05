@@ -12,7 +12,7 @@ public class C02_WebTableDemoqa {
 
     DemoqaPage demoqaPage;
 
-    @Test
+    @Test (groups = {"Smoke", "Regression"})
     public void demoqaTest(){
         // 1. "https://demoqa.com/webtables" sayfasına gidin.
         Driver.getDriver().get(ConfigReader.getProperty("demoqaURL"));

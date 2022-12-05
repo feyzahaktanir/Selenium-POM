@@ -13,7 +13,7 @@ public class C02_WebTables {
     HotelMyCampPage hotelMyCampPage;
 
     //1-login() metodunu oluşturun ve oturum açın
-    @Test
+    @Test ( groups = "Miniregression")
     public void login (){
         //2-https://www.hotelmycamp.com/admin/HotelRoomAdmin adresine gidin
         //          Username: manager
