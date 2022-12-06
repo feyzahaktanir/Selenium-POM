@@ -17,7 +17,7 @@ public class C05_ExcelMapeTukleme {
 
         //System.out.println(ReusableMethods.createMAP(path, pageName));
 
-        Map<String,String> ulkeler = ReusableMethods.createMAP(path, pageName);
+        Map<String,String> ulkeler = ReusableMethods_Excel.createMAP(path, pageName);
 
         //oluşturduğumuz map'i kullanarak Turkey'in bilgilerni yazdırın
         System.out.println(ulkeler.get("Turkey"));

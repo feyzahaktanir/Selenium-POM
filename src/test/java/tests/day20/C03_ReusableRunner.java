@@ -11,7 +11,7 @@ public class C03_ReusableRunner {
 
         String path = "src/test/java/resources/test.xlsx";
         String expectedData = "Azerbaycan";
-        String actualData = ReusableMethods.cellCaller(path, "Sayfa1", 11, 2).toString();
+        String actualData = ReusableMethods_Excel.cellCaller(path, "Sayfa1", 11, 2).toString();
         Assert.assertEquals(actualData, expectedData);
     }
 }

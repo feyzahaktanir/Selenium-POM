@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
-public class ReusableMethods {
+public class ReusableMethods_Excel {
     //bir metod oluşturulam
     //dosya yolu ve satır, hücre indexini verince hücre bilgisini döndürsün
 
